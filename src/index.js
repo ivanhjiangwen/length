@@ -1,4 +1,8 @@
 export class Length {
+  static YARD = 'yard'
+  static FOOT = 'foot'
+  static INCH = 'inch'
+
   value
   unit
 
@@ -15,9 +19,6 @@ export class Length {
     return this.unit
   }
 
-  static YARD = 'yard'
-  static FOOT = 'f'
-  static INCH = 'inch'
   parseTo(unit) {
     let result = this
     if (this.unit === Length.YARD) {
