@@ -23,12 +23,12 @@ export class Length {
     if (this.unit === Length.YARD) {
       if (unit === Length.FOOT) {
         result = new Length(this.value * 3, unit)
-      } else if (unit === 'inch') {
+      } else if (unit === Length.INCH) {
         result = new Length(this.value * 36, unit)
       }
     }
 
-    if (this.unit === 'inch') {
+    if (this.unit === Length.INCH) {
       if (unit === Length.YARD) {
         result = new Length(this.value / 36, unit)
       } else if (unit === Length.FOOT) {
@@ -39,7 +39,7 @@ export class Length {
     if (this.unit === Length.FOOT) {
       if (unit === Length.YARD) {
         result = new Length(this.value / 3, unit)
-      } else if (unit === 'inch') {
+      } else if (unit === Length.INCH) {
         result = new Length(this.value * 12, unit)
       }
     }
