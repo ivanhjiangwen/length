@@ -16,31 +16,31 @@ describe('Length', () => {
   })
 
   it("should 3 feet equals 1 'yard'", () => {
-    const result = new Length(3, 'f').parseTo('yard')
+    const result = new Length(3, 'f').parseTo(Length.YARD)
 
     expect(result.getValue()).toEqual(1)
-    expect(result.getUnit()).toEqual('yard')
+    expect(result.getUnit()).toEqual(Length.YARD)
   })
 
   it("should 1 'yard' equals 3 feet", () => {
-    const result = new Length(1, 'yard').parseTo('f')
+    const result = new Length(1, Length.YARD).parseTo('f')
 
     expect(result.getValue()).toEqual(3)
     expect(result.getUnit()).toEqual('f')
   })
 
   it("should 1 'yard' equals 36 inches", () => {
-    const result = new Length(1, 'yard').parseTo('inch')
+    const result = new Length(1, Length.YARD).parseTo('inch')
 
     expect(result.getValue()).toEqual(36)
     expect(result.getUnit()).toEqual('inch')
   })
 
   it("should 1 'yard' equals 1 'yard'", () => {
-    const result = new Length(1, 'yard').parseTo('yard')
+    const result = new Length(1, Length.YARD).parseTo(Length.YARD)
 
     expect(result.getValue()).toEqual(1)
-    expect(result.getUnit()).toEqual('yard')
+    expect(result.getUnit()).toEqual(Length.YARD)
   })
 
   it("should 12 inches equals 1 'foot'", () => {
@@ -51,10 +51,10 @@ describe('Length', () => {
   })
 
   it("should 36 inches equals 1 'yard'", () => {
-    const result = new Length(36, 'inch').parseTo('yard')
+    const result = new Length(36, 'inch').parseTo(Length.YARD)
 
     expect(result.getValue()).toEqual(1)
-    expect(result.getUnit()).toEqual('yard')
+    expect(result.getUnit()).toEqual(Length.YARD)
   })
 
   it("should 1 inch equals 1 'inch'", () => {
