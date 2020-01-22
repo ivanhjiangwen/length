@@ -15,6 +15,7 @@ export class Length {
     return this.unit
   }
 
+  static YARD = 'yard'
   parseTo(unit) {
     let result = this
     if (this.unit === 'yard') {
